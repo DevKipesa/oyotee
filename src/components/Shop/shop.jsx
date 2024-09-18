@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import productsData from './products'; // Assuming you have a products file
-import { FaSearch } from 'react-icons/fa'; // Import the search icon from react-icons
-import Navbar from '../Navbar/nav'; // Assuming Navbar is in this directory
+import productsData from './products'; 
+import { FaSearch } from 'react-icons/fa';
+import Navbar from '../Navbar/nav'; 
 import Sidebar from '../Sidebar/side';
-import './shop.css'; // Importing the shop CSS
+import './shop.css'; 
 
 const ProductList = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -16,9 +16,13 @@ const ProductList = () => {
   const handleProductClick = (product) => setSelectedProduct(product);
   const togglePriceDropdown = () => setPriceDropdownOpen(!priceDropdownOpen);
 
-  // Filter and sort products based on search term and sort option
+  
+  const handleCloseProductDetails = () => setSelectedProduct(null);
+
   const filteredProducts = productsData
-    .filter((product) => product.title.toLowerCase().includes(searchTerm.toLowerCase()))
+    .filter((product) =>
+      product.title.toLowerCase().includes(searchTerm.toLowerCase())
+    )
     .sort((a, b) => {
       switch (sortOption) {
         case 'Relevance':
@@ -36,14 +40,10 @@ const ProductList = () => {
 
   return (
     <div className="shop-container">
-      {/* Navbar component */}
       <Navbar />
       <Sidebar />
-
-      {/* Main shop content (right below the navbar) */}
       <div className="shopy">
         <div className="content-wrapper">
-          {/* Search bar */}
           <div className="search-wrapper">
             <input
               type="text"
@@ -53,8 +53,12 @@ const ProductList = () => {
             />
             <FaSearch className="search-icon" />
           </div>
+          {searchTerm && (
+            <div className="search-results-message">
+              Search results for "{searchTerm}"
+            </div>
+          )}
 
-          {/* Sort by section */}
           <div className="sort-wrapper">
             <span>Sort</span>
             <div className="sort-buttons">
@@ -86,8 +90,6 @@ const ProductList = () => {
               </div>
             </div>
           </div>
-
-          {/* Product list */}
           <div className="product-list">
             {filteredProducts.map((product) => (
               <div
@@ -99,16 +101,17 @@ const ProductList = () => {
                 <h3>{product.title}</h3>
                 <p className="product-description">{product.description}</p>
                 <p>Rating: {product.rating}</p>
-                <p>Price: ${product.price}</p>
-                <button>Add to Cart</button>
+                <p className="price">Price: ${product.price}</p>
+                <button className="add">Add to Cart</button>
               </div>
             ))}
           </div>
         </div>
-
-        {/* Product details on the right side when a product is clicked */}
         {selectedProduct && (
           <div className="product-details show">
+            <button className="close-button" onClick={handleCloseProductDetails}>
+              X
+            </button>
             <h2>{selectedProduct.title}</h2>
             <img src={selectedProduct.image} alt={selectedProduct.title} />
             <p>Rating: {selectedProduct.rating}</p>

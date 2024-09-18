@@ -2,14 +2,11 @@ import React, { useState } from "react";
 import './side.css';
 
 const Sidebar = () => {
-  // State for dropdown toggle and price input
   const [showOthers, setShowOthers] = useState(false);
   const [price, setPrice] = useState({ min: '', max: '' });
 
-  // Function to handle dropdown toggle
   const toggleDropdown = () => setShowOthers(!showOthers);
 
-  // Handle price input changes
   const handlePriceChange = (e) => {
     const { name, value } = e.target;
     setPrice({ ...price, [name]: value });
@@ -17,11 +14,7 @@ const Sidebar = () => {
 
   return (
     <div className="sidebar">
-      {/* Filter Title */}
-      
         <h2 className="filter-title">Filter</h2>
-
-      {/* Categories */}
       <div className="filter-section">
         <h3>Categories</h3>
         <div className="category-item">
@@ -44,8 +37,6 @@ const Sidebar = () => {
           <input type="checkbox" />
           <label>Planters</label>
         </div>
-
-        {/* Dropdown for "Others" */}
         <div className="dropdown">
           <div className="category-item" onClick={toggleDropdown}>
             <input type="checkbox" />
@@ -66,8 +57,6 @@ const Sidebar = () => {
           )}
         </div>
       </div>
-
-      {/* Price Range */}
       <div className="filter-section">
         <h3>Price Range</h3>
         <div className="price-range">
@@ -88,8 +77,6 @@ const Sidebar = () => {
           <button className="set-price-btn">Set Price</button>
         </div>
       </div>
-
-      {/* Rating */}
       <div className="filter-section">
         <h3>Rating</h3>
         <div className="rating-item">

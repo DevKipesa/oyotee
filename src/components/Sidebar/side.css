@@ -1,40 +1,35 @@
-/* Sidebar Container */
 .sidebar {
     width: 250px;
     padding: 20px;
     background-color: #f4f4f9;
     border-right: 1px solid #ddd;
-    height: 100vh; /* Full viewport height */
+    height: 100vh; 
     box-sizing: border-box;
     top: 0;
     left: 0;
-    overflow-y: auto; /* Adds vertical scrolling if content exceeds viewport height */
+    overflow-y: auto; 
   }
   
-  /* Filter Title */
   .filter-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 20px;
-    border-bottom: 2px solid #ddd; /* Border below the title */
-    padding-bottom: 10px; /* Space below the text and border */
-    color: #333; /* Ensure text color is visible */
+    border-bottom: 2px solid #ddd; 
+    padding-bottom: 10px; 
+    color: #333; 
   }
   
-  /* Filter Section Container */
   .filter-section {
     margin-bottom: 30px;
-    padding-bottom: 20px; /* Space for bottom border */
-    border-bottom: 1px solid #ddd; /* Bottom border for separation */
+    padding-bottom: 20px; 
+    border-bottom: 1px solid #ddd; 
   }
-  
   .filter-section h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
   }
   
-  /* Category Items */
   .category-item {
     display: flex;
     align-items: center;
@@ -46,7 +41,6 @@
     font-size: 1rem;
   }
   
-  /* Dropdown Styles */
   .dropdown {
     cursor: pointer;
   }
@@ -60,7 +54,6 @@
     margin-left: 10px;
   }
   
-  /* Price Range Section */
   .price-range input {
     width: 70px;
     padding: 5px;
@@ -98,4 +91,34 @@
     font-size: 1.5rem;
     color: gold;
   }
+  input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #28a745;
+    border-radius: 3px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  input[type="checkbox"]:checked {
+    background-color: #4caf50; 
+    border-color: #4caf50; 
+  }
+  
+  input[type="checkbox"]:checked::before {
+    content: "✔";
+    color: white;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+  }
+  
   

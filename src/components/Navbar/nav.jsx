@@ -6,12 +6,10 @@ import './nav.css';
 const Navbar = () => {
   return (
     <nav className="navbar">
-      {/* Logo on the top left */}
       <div className="logo">
         <Link to="/">Oyotee</Link>
       </div>
 
-      {/* Centered links */}
       <ul className="nav-links">
         <li><Link to="/shop">Shop</Link></li>
         <li><Link to="/plantcare">Plantcare</Link></li>
@@ -19,7 +17,6 @@ const Navbar = () => {
         <li><Link to="/blogs">Blogs</Link></li>
       </ul>
 
-      {/* Icons on the top right */}
       <div className="nav-icons">
         <Link to="/cart"><FiShoppingCart /></Link>
         <Link to="/wishlist"><FiHeart /></Link>
