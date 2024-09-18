@@ -229,3 +229,8 @@
 .search-results-message{
     margin-bottom: 20px;
 }  
+@media (max-width: 1024px) {
+    .product-details {
+      width: 20%;
+    }
+}
