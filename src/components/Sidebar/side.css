@@ -1,0 +1,101 @@
+/* Sidebar Container */
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-right: 1px solid #ddd;
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    overflow-y: auto; /* Adds vertical scrolling if content exceeds viewport height */
+  }
+  
+  /* Filter Title */
+  .filter-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd; /* Border below the title */
+    padding-bottom: 10px; /* Space below the text and border */
+    color: #333; /* Ensure text color is visible */
+  }
+  
+  /* Filter Section Container */
+  .filter-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px; /* Space for bottom border */
+    border-bottom: 1px solid #ddd; /* Bottom border for separation */
+  }
+  
+  .filter-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Category Items */
+  .category-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .category-item label {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+  
+  /* Dropdown Styles */
+  .dropdown {
+    cursor: pointer;
+  }
+  
+  .dropdown-content {
+    margin-left: 20px;
+  }
+  
+  .dropdown-icon {
+    font-size: 0.8rem;
+    margin-left: 10px;
+  }
+  
+  /* Price Range Section */
+  .price-range input {
+    width: 70px;
+    padding: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .set-price-btn {
+    padding: 5px 30px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left:20px ;
+  }
+  
+  .set-price-btn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Rating Section */
+  .rating-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rating-item input {
+    margin-right: 10px;
+  }
+  
+  .rating-stars {
+    font-size: 1.5rem;
+    color: gold;
+  }
+  
