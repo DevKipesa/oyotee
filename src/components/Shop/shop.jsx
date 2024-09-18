@@ -43,6 +43,7 @@ const ProductList = () => {
       {/* Main shop content (right below the navbar) */}
       <div className="shopy">
         <div className="content-wrapper">
+          {/* Search bar */}
           <div className="search-wrapper">
             <input
               type="text"
@@ -55,9 +56,9 @@ const ProductList = () => {
 
           {/* Sort by section */}
           <div className="sort-wrapper">
-            <span>Sort by:</span>
+            <span>Sort</span>
             <div className="sort-buttons">
-              {['Relevance', 'Popular', 'Most New'].map(option => (
+              {['Relevance', 'Popular', 'Most New'].map((option) => (
                 <button
                   key={option}
                   className={`sort-button ${sortOption === option ? 'active' : ''}`}
@@ -79,16 +80,14 @@ const ProductList = () => {
                     value={sortOption}
                     onChange={handleSortChange}
                   >
-                    <option value="Relevance">Relevance</option>
-                    <option value="Popular">Popular</option>
-                    <option value="Most New">Most New</option>
-                    <option value="Price">Price</option>
+                    <option value="Price">Amount</option>
                   </select>
                 )}
               </div>
             </div>
           </div>
 
+          {/* Product list */}
           <div className="product-list">
             {filteredProducts.map((product) => (
               <div
@@ -107,13 +106,15 @@ const ProductList = () => {
           </div>
         </div>
 
+        {/* Product details on the right side when a product is clicked */}
         {selectedProduct && (
-          <div className="product-details">
+          <div className="product-details show">
             <h2>{selectedProduct.title}</h2>
             <img src={selectedProduct.image} alt={selectedProduct.title} />
             <p>Rating: {selectedProduct.rating}</p>
             <p>Price: ${selectedProduct.price}</p>
             <p>{selectedProduct.description}</p>
+            <button>Add to Cart</button>
           </div>
         )}
       </div>
