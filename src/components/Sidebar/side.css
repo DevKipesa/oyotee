@@ -1,5 +1,5 @@
-.sidebar {
-    width: 200px;
+.sides {
+    width: 250px;
     padding: 20px;
     background-color: #f4f4f9;
     border-right: 1px solid #ddd;
@@ -120,9 +120,33 @@
     width: 12px;
     height: 12px;
   }
+ 
   @media (max-width: 768px) {
     .sidebar {
-      width: 100px;
+      width: 200px;
+      padding:20px;
+      background-color: #f4f4f9;
+      border-right: 1px solid #ddd;
+      height: 100vh; 
+      box-sizing: border-box;
+      top: 0;
+      left: 0;
+      overflow-y: auto; 
     }
-}
-  
+    .set-price-btn {
+      margin-left:20px ;
+    }
+    .price-range input {
+      width: 70px;
+      padding: 5px;
+      margin-right: 2px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  }
+  @media (max-width: 320px) {
+    .logo a {
+      font-size: 1.5rem;
+    }
+  }

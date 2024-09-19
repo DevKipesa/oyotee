@@ -86,7 +86,7 @@
 @media (max-width: 320px) {
   .nav-links {
     position: absolute;
-    top: 60px;
+    top: 20px;
     right: 0;
     width: 100%;
     flex-direction: column;

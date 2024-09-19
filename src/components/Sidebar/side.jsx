@@ -13,7 +13,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="sidebar">
+    <div className="sides">
         <h2 className="filter-title">Filter</h2>
       <div className="filter-section">
         <h3>Categories</h3>
