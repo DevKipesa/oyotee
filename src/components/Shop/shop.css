@@ -59,7 +59,6 @@
     color: #777;
   }
   
-  /* Sort wrapper remains on the left */
   .sort-wrapper {
     margin-bottom: 20px;
   }
@@ -122,7 +121,6 @@
     background-color: #218838;
   }
   
-  /* Horizontal layout for sort buttons */
   .sort-wrapper {
     margin-bottom: 20px;
     margin-right: 30px;
@@ -168,9 +166,7 @@
     padding: 5px;
     z-index: 10;
   }
-  
-  /* Product details card on the right */
-  .product-details {
+    .product-details {
     position: fixed;
     top: 90px; 
     right: 0;
@@ -311,9 +307,9 @@ margin-left: 80px;  }
     padding-top: 60px; 
   }
   .product-list {
-    grid-template-columns: 1fr; /* Change to 1 column */
-    width: 100%; /* Full width */
-    max-width: 100%; /* Remove max-width constraint */
+    grid-template-columns: 1fr; 
+    width: 100%; 
+    max-width: 100%; 
   }
   .search-wrapper {
     display: flex;
