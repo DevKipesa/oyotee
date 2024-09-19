@@ -26,7 +26,7 @@
     position: fixed; 
     top: 0;
     left: 0;
-    background-color: #f8f8f8;
+    background-color: white;
     padding-top: 60px; 
   }
   
@@ -235,7 +235,7 @@
       position: fixed; 
       top: 0;
       left: 0;
-      background-color: #f8f8f8;
+      background-color: white;
       padding-top: 60px; 
     }
 }
@@ -253,7 +253,7 @@ margin-left: 80px;  }
     position: fixed; 
     top: 0;
     left: 0;
-    background-color: #f8f8f8;
+    background-color: white;
     padding-top: 60px; 
   }
   .product-details {
@@ -303,7 +303,7 @@ margin-left: 80px;  }
     position: fixed; 
     top: 0;
     left: 0;
-    background-color: #f8f8f8;
+    background-color: white;
     padding-top: 60px; 
   }
   .product-list {

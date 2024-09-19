@@ -1,7 +1,7 @@
 .sides {
     width: 250px;
     padding: 20px;
-    background-color: #f4f4f9;
+    background-color: white;
     border-right: 1px solid #ddd;
     height: 100vh; 
     box-sizing: border-box;
